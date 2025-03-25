@@ -81,6 +81,7 @@ hr.RampBreak--l {
 
 .RampInputSelect--root {
   width: 100%;
+  position: relative;
 }
 
 .RampInputSelect--input {
@@ -88,11 +89,17 @@ hr.RampBreak--l {
   border: 1px solid var(--color-light-shade);
   border-bottom: 1px solid var(--color-text);
   cursor: pointer;
+  width: 100%;
+  text-align: left;
+  background: var(--color-empty-shade);
 }
 
 .RampInputSelect--dropdown-container {
   display: none;
-  position: fixed;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   width: 100%;
   max-width: 700px;
   border: 1px solid var(--color-darker-shade);
@@ -100,6 +107,8 @@ hr.RampBreak--l {
   max-height: 16rem;
   overflow: auto;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 1px, rgb(0 0 0 / 13%) 0px 4px 8px;
+  background-color: var(--color-empty-shade);
+  z-index: 1000;
 }
 
 .RampInputSelect--dropdown-container-opened {
